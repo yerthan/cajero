@@ -1,9 +1,5 @@
+import java.io.*;
 import java.util.Scanner;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 
 
 public class cajero {
@@ -19,6 +15,7 @@ public class cajero {
         boolean salir = false;
         double cantidad = 1000.00;
 
+        crearArchivoSiNoExiste();
 
         while(salir == false){
 
@@ -32,6 +29,9 @@ public class cajero {
             switch (opcion){
                 case 1:
                     System.out.println("Dime cuantos quieres retirar");
+                    double retirar = sc.nextDouble();
+                    System.out.println("Vas a retirar, " + retirar);
+                    cantidad -= retirar;
                     System.out.println("Tienes " + cantidad);
                     break;
                 case 2:
@@ -75,4 +75,15 @@ public class cajero {
         System.out.println("------------------------");
     }
 
+    private static void crearArchivoSiNoExiste() {
+        File file = new File(MOVIMIENTOS_FILE);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                System.out.println("Error al crear el archivo.");
+                e.printStackTrace();
+            }
+        }
+    }
 }

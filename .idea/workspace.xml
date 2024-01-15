@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7108913f-9d31-4a33-93d8-b21a8941c098" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cajero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       <workItem from="1705321185786" duration="2293000" />
       <workItem from="1705342399888" duration="208000" />
       <workItem from="1705343188432" duration="305000" />
-      <workItem from="1705345409163" duration="2041000" />
+      <workItem from="1705345409163" duration="2343000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio en el main">
       <created>1705346648652</created>
@@ -64,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705346648652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Metodos nuevos">
+      <created>1705347612134</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705347612134</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +78,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambio en el main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio en el main" />
+    <MESSAGE value="Metodos nuevos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metodos nuevos" />
   </component>
 </project>
