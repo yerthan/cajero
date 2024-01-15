@@ -17,7 +17,8 @@ public class cajero {
             System.out.println("tienes un par de opciones, que quieres hacer");
             System.out.println("1. Retirar fondos");
             System.out.println("2. Ingresar fondos");
-            System.out.println("3. Salir");
+            System.out.println("3- Consulta de movimientos");
+            System.out.println("4. Salir");
             int opcion = sc.nextInt();
 
             switch (opcion){
@@ -32,15 +33,15 @@ public class cajero {
                     cantidad += anadir;
                     System.out.println("Tienes en total " + cantidad);
                     break;
-                case 3 :
+                case 3:
+                    System.out.println("Mostrando todos los movimientos");
+                case 4 :
                     System.out.println("Adios");
                     salir = true;
                     break;
                 default:
-                    System.out.println("no has introducido un numero correctamente");
+                    System.out.println("No has introducido un numero correctamente");
             }
         }
-
     }
-
 }
