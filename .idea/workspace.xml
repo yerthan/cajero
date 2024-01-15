@@ -55,11 +55,23 @@
       <workItem from="1705321185786" duration="2293000" />
       <workItem from="1705342399888" duration="208000" />
       <workItem from="1705343188432" duration="305000" />
-      <workItem from="1705345409163" duration="1157000" />
+      <workItem from="1705345409163" duration="2041000" />
     </task>
+    <task id="LOCAL-00001" summary="Cambio en el main">
+      <created>1705346648652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705346648652</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambio en el main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio en el main" />
   </component>
 </project>
