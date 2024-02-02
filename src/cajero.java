@@ -55,7 +55,17 @@ public class cajero {
                 case 3:
                     consultarMovimientos();
                     break;
-                case 4 :
+                case 4:
+                    System.out.println("Ingrese el DNI del cliente:");
+                    String dniCliente = sc.next();
+                    listarCuentasCliente(dniCliente);
+                    break;
+                case 5:
+                    System.out.println("Ingrese la cantidad para consultar cuentas con saldo menor:");
+                    double saldoLimite = sc.nextDouble();
+                    consultarCuentasSaldoMenor(saldoLimite);
+                    break;
+                case 6 :
                     System.out.println("Adios");
                     salir = true;
                     break;
@@ -101,5 +111,41 @@ public class cajero {
             }
         }
         return true;
+    }
+
+
+    private static void listarCuentasCliente(String dniCliente) {
+        System.out.println("Listado de cuentas para el cliente con DNI " + dniCliente);
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(MOVIMIENTOS_FILE))) {
+            String linea;
+            System.out.println("Listado de cuentas para el cliente con DNI " + dniCliente + ":");
+            while ((linea = reader.readLine()) != null) {
+                if (linea.contains(dniCliente)) {
+                    System.out.println(linea);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al leer las cuentas del archivo");
+        }
+    }
+
+    private static void consultarCuentasSaldoMenor(double saldoLimite) {
+        System.out.println("Listado de cuentas con saldo menor a " + saldoLimite);
+        try (BufferedReader reader = new BufferedReader(new FileReader(MOVIMIENTOS_FILE))) {
+            String linea;
+            System.out.println("Listado de cuentas con saldo menor a " + saldoLimite + ":");
+            while ((linea = reader.readLine()) != null) {
+                String[] partes = linea.split(": ");
+                if (partes.length == 2) {
+                    double saldo = Double.parseDouble(partes[1]);
+                    if (saldo < saldoLimite) {
+                        System.out.println(linea);
+                    }
+                }
+            }
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Error al leer las cuentas del archivo o al convertir el saldo");
+        }
     }
 }
